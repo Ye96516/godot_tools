@@ -1,0 +1,136 @@
+[gd_scene load_steps=2 format=3 uid="uid://byh3011vn55nx"]
+
+[ext_resource type="Script" uid="uid://b5y1tqc6to67w" path="res://addons/replace_tiles/replace_tiles.gd" id="1_d81va"]
+
+[node name="ReplaceDialog" type="ConfirmationDialog"]
+position = Vector2i(657, 392)
+size = Vector2i(562, 347)
+visible = true
+script = ExtResource("1_d81va")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 554.0
+offset_bottom = 298.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "原瓦片的图集坐标"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 11
+text = "x: "
+horizontal_alignment = 2
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 11
+size_flags_vertical = 4
+max_length = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 11
+text = "y: "
+horizontal_alignment = 2
+
+[node name="LineEdit2" type="LineEdit" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 11
+size_flags_vertical = 4
+max_length = 2
+
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "新瓦片的图集坐标"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 11
+text = "x: "
+horizontal_alignment = 2
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 11
+size_flags_vertical = 4
+max_length = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 11
+text = "y: "
+horizontal_alignment = 2
+
+[node name="LineEdit2" type="LineEdit" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 11
+size_flags_vertical = 4
+max_length = 2
+
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.22
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+self_modulate = Color(1, 0.301961, 0.0352941, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "一定要输入正确的源id！"
+horizontal_alignment = 2
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.7
+placeholder_text = "请输入源id"
+
+[node name="Control" type="Control" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.97
