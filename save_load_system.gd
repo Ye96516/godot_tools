@@ -1,10 +1,7 @@
-class_name SLSystem extends Resource
-
-@export var archives_file:Dictionary={
-}
+extends Node
 
 var game_data_path:String="user://game_data.tres"
-var data:SLSystem
+var data:Content
 
 ##保存数据
 func save_data(key:String,value):
@@ -15,7 +12,7 @@ func save_data(key:String,value):
 ##加载数据
 func load_data(key:String):
 	if FileAccess.file_exists(game_data_path):
-		data=ResourceLoader.load(game_data_path) as SLSystem
+		data=ResourceLoader.load(game_data_path) as Content
 		if not (key in data.archives_file):
 			printerr("键 "+key+" 不存在")
 			return
@@ -54,10 +51,17 @@ func clear_certain_content(key:String):
 	else:
 		printerr("键<"+key+">不存在")
 
+func query_key(key:String):
+	_init_file()
+	if data.archives_file.has(key):
+		return true
+	else:
+		return false
+
 ##初始化文件，一般来说外界无需刻意调用
 func _init_file():
 	if FileAccess.file_exists(game_data_path):
-		data = ResourceLoader.load(game_data_path) as SLSystem
+		data= ResourceLoader.load(game_data_path) as Content
 	else:
-		data = SLSystem.new()
+		data = Content.new()
 		ResourceSaver.save(data, game_data_path)
